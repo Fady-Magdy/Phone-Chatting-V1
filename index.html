@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Phone Chat</title>
+    <style> 
+    img {
+        width: 50px;
+    }   
+    </style>
+</head>
+<body> 
+    <div class="big-container">
+        <div class="phone-container">
+            <div class="sender-name-box sender-me-name hidden">Fady</div>
+            <div class="sender-name-box sender-him-name hidden">Michael</div>
+            <div class="phone">
+                <div class="top-bar">
+                    <div class="cam"></div>
+                    <div class="microphone"></div>
+                </div>
+                <div class="top-area">
+                    <div class="signal"></div>
+                    <p class="time">00:00 AM</p>
+                </div>
+                <div class="screen">
+
+
+                </div>
+                <!-- send area -->
+                <div class="screen-input">
+                    <div class="sender-image-bottom">
+                        <img  id="sender-img" src="images/sender-me.jpg" alt="">
+                    </div>
+                    <input placeholder="Send Message" type="text">
+                    <button class="send-btn">></button>
+                    <div class="sender-img-menu hidden">
+                        <button class="changeToMe">Me</button>
+                        <button class="changeToHim">Him</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input-side">
+            <div>
+                <h4>Choose message sender</h4>
+                <div class="sender-switch">
+                    <input class="me-radio" type="radio" name="sender" id="me" value="me">
+                    <label for="me">Me</label>
+                    <input class="him-radio" type="radio" name="sender" id="him" value="him">
+                    <label for="him">Him</label>
+                    <p>Click L to Switch</p>
+                    <p class="sender-name"></p>
+                </div>
+                <h4>Change Names</h4>
+                <div class="change-name-container">
+                    <label for="my-name">Me</label>
+                    <input id="my-name" type="text" class="name-change" placeholder="My Name">
+                    <label for="his-name">Him</label>
+                    <input id="his-name" type="text" class="name-change" placeholder="His Name">
+                </div>
+                <div class="names-view">
+                    <p class="names-view1">My Name: (Not Set!)</p>
+                    <p class="names-view2">His Name: (Not Set!)</p>
+                </div>
+                <div class="image-upload">
+                    <button><input class="image-choose-me" type="file">Change My Image</button>
+                    <button><input class="image-choose-him" type="file">Change His Image</button>
+                </div>
+            </div>
+            <div class="control-buttons">
+                <button class="submit">Change</button>
+                <button class="clear-chat">Clear Chat</button>
+            </div>
+        </div>
+    </div>
+    <div class="page-cover hidden"></div>
+    <div class="areYouSure hidden">
+        <h1>Are you sure??</h1>
+        <div class="sureButtons ">
+            <button class="yes">Yes</button>
+            <button class="no">No</button>
+        </div>
+    </div>
+</body>
+</html>

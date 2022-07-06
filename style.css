@@ -1,0 +1,394 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) , url(images/Background1.jpg) ; 
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.big-container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+}
+
+/* ---------------------------------------------------------------- */
+/* Phone Area */
+.phone-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.phone {
+    min-width: 350px;
+    height: 640px;
+    background-image: url(images/screenBackground.jpg) ;
+    background-size: cover;
+    border-radius: 25px;
+    border: 7px solid #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px rgba(0 0 0 / 0.4);
+}
+
+
+/* Top bar */
+.top-bar {
+    background-color: #fff;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: absolute;
+    left: calc(50% - 75px) ;
+    top: -5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.top-bar .cam {
+    width: 7px;
+    height: 7px;
+    border: solid 4px #000;
+    background-color: #aaa;
+    border-radius: 50%;
+}
+.top-bar .microphone {
+    width: 50px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+
+/* Top area */
+.top-area {
+    width: 100%;
+    height: 25px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-area .time {
+    margin: 0 25px;
+    font-weight: bold;
+    color: #fff;
+}
+.top-area  .signal {
+    width: 50px;
+}
+
+/* Screen */
+.screen {
+    width: 100%;
+    height: calc(100% - 25px - 50px) ;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow-y: scroll ;
+}
+.screen::-webkit-scrollbar {
+    width: 0px;
+}
+.sender-name-box {
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.sender-me-name {
+    right: 130px;
+    bottom: 50%;
+}
+.sender-him-name {
+    left: 100px;
+    bottom: 50%;
+}
+.screen .message-container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.screen .message-container .msg-and-date {
+    display: flex;
+    flex-direction: column;
+}
+.screen .send .message{
+    background-color: rgb(255, 119, 248);
+    border-radius: 20px 20px 0 20px;
+}
+.screen .send {
+    flex-direction: row-reverse;
+
+}
+.screen .send .msg-and-date{
+    align-items: flex-end;
+}
+.sender-image {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.sender-image img {
+    width: 100%;
+}
+.screen .message {
+    display: inline;
+    padding: 7px 15px;
+    max-width: 200px;
+    height: auto;
+    border-radius: 20px 20px 20px 0;
+    background-color: #fff;
+    margin: 0 10px;
+    cursor: default;
+}
+.screen .msg-date {
+    color: #aaa;
+    font-size: 10px;
+    padding: 5px 15px 0;
+    margin-top: 0;
+    cursor: default;
+}
+
+/* Screen Input */
+.screen-input {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    position: relative;
+}
+.screen-input input {
+    width: 70%;
+    height: 60%;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding-left: 10px;
+    background-color: #222;
+    color: #fff;
+}
+.screen-input .send-btn {
+    border-radius: 0 5px 10px 0;
+    border: none;
+    background-color: #555;
+    width: 30px;
+    height: 64%;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.2s;
+}
+.screen-input .send-btn:hover {
+    filter: brightness(1.5);
+}
+.screen-input .sender-image-bottom {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.screen-input .sender-image-bottom:hover {
+    filter: brightness(1.2);
+}
+.sender-image-bottom img {
+    width: 100%;
+}
+.sender-img-menu {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    top: -50px;
+    left: 3px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.sender-img-menu button {
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+    background-color: #222;
+    color: #fff;
+    border: solid 2px #fff;
+    border-radius: 5px;
+}
+.sender-img-menu button:hover {
+    filter: brightness(1.4);
+}
+.sender-img-menu .changeToMe {
+    border-radius: 5px 5px 0 0 ;
+}
+.sender-img-menu .changeToHim {
+    border-radius: 0 0 5px 5px ;
+}
+/* ----------------------------------------------------------- */
+/* Input Area (Right Side)*/
+
+.input-side {
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+.sender-switch {
+    display: flex;
+    align-items: center;
+}
+.sender-switch input{
+    width: 25px;
+    height: 25px;
+    transition: 0.2s;
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+.sender-switch label{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.sender-switch p {
+    margin-left: 40px;
+    opacity: 0.6;
+}
+.control-buttons button {
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: #111;
+    border: solid 2px #aaa;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+.control-buttons button:hover {
+    transform: scale(1.1);
+    background-color: #333;
+
+}
+.control-buttons {
+    position: absolute;
+    bottom: 70px;
+}
+
+/* remove verify pop up */
+.areYouSure {
+    width: 40%;
+    height: 40%;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.areYouSure button {
+    width: 80px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.areYouSure button:hover{
+    transform: scale(1.1);
+}
+
+
+/* Change Names */
+.name-change {
+    width: 28%;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: #333;
+    color: #fff;
+}
+.names-view {
+    width: 77%;
+    display: flex;
+}
+.names-view p {
+    width: 50%;
+    color: #aaa;
+    margin-top: 5px;
+    padding-left: 30px;
+}
+.image-upload button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #111;
+    border: 2px solid #888;
+    color: #ccc;
+    margin-left: 30px;
+    margin-right: 65px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+.image-upload button:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+.image-upload button input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    cursor: pointer;
+
+}
+
+
+
+@media (max-width: 900px){
+    body {
+        overflow-y: auto;
+    }
+    .big-container{
+        flex-direction: column;
+    }
+    .phone-container{
+        width: 100%;
+    }
+
+
+
+}
+
+
+.hidden {
+    display: none;
+}
+.page-cover {
+    width: 100% ;
+    height: 100% ;
+    background: rgba(0 0 0 / 0.8) ;
+    position: absolute
+}
